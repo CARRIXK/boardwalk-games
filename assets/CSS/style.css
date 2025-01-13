@@ -1,13 +1,44 @@
-/* inter */
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
+/* CSS variables */
+/* root sudo class makes css variabes globally accessible to the entire css file*/
+:root {
+    --primary-font: "Inter", sans-serif; /* primary font is inter with a backup font of sans serif */
+    --secondary-font: "Macondo", cursive; /* secondary font is macondo with a backup font of cursive */
+    --primary-color: #416a8e; /* primary color is a light grey */
+    --secondary-color: #aa9581; /* secondary color is a light grey */
+    --highlight-color: #416a8e;
+    --light-highlight-color: #7a9fc2;
+
 }
 
-/* Mac */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
+/* Global styles */
 
-h1 {
-    font-family: 'Macondo', cursive;
+body {
+    font-family: var(--primary-font); /* font family is inter */
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font); /* font family is macondo */
+}
+
+.sub-heading-color {
+    color: var(--highlight-color); 
+}
+
+
+/* Grid visualising CSS for testing */
+
+.container,
+.row {
+    border: 2px solid black;
+}
+
+.col-12 {
+    border: 2px solid white;
+    background-color: lightgray;
 }
