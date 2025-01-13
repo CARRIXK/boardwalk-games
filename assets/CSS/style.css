@@ -4,12 +4,12 @@
 /* CSS variables */
 /* root sudo class makes css variabes globally accessible to the entire css file*/
 :root {
-    --primary-font: "Inter", sans-serif; /* primary font is inter with a backup font of sans serif */
-    --secondary-font: "Macondo", cursive; /* secondary font is macondo with a backup font of cursive */
-    --primary-color: #416a8e; /* primary color is a light grey */
-    --secondary-color: #aa9581; /* secondary color is a light grey */
-    --highlight-color: #416a8e;
-    --light-highlight-color: #7a9fc2;
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Macondo", cursive;
+    --primary-color: #3a2620; /* dark brown */
+    --secondary-color: #aa9581; /* light brown */
+    --highlight-color: #416a8e; /* blue */
+    --highlight-color-light: #7a9fc2; /* light blue */
 
 }
 
@@ -30,6 +30,16 @@ h3 {
     color: var(--highlight-color); 
 }
 
+/* Navbar */
+#navbar {
+    background-color: var(--primary-color); /* background color is light grey */
+}
+
+#navbar .logo {
+    width: 30px;
+}
+
+
 
 /* Grid visualising CSS for testing */
 
@@ -42,3 +52,4 @@ h3 {
     border: 2px solid white;
     background-color: lightgray;
 } */
+
