@@ -180,7 +180,7 @@ min-vh-100: This class sets the minimum height of the body to 100% of the viewpo
                 </div>
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card">
-                        <img src="assets/images/services-3.webp" class="card-img-top">
+                        <img src="assets/images/services-3.webp" class="card-img-top" alt="A chess tourdament being held at boardwalk games" 
                         <div class="card-body">
                             <h3 class="card-title sub-heading-color">Events</h3>
                             <p class="card-text">
@@ -236,13 +236,13 @@ min-vh-100: This class sets the minimum height of the body to 100% of the viewpo
                     <i class="fas fa-paper-plane"></i> info@boardwalk-games.co
                     </p>
                     <div class="social-links my-4">
-                        <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-2">
+                        <a href="https://www.instagram.com/yourprofile" target="_blank" class="me-2" aria-label="Instagram Logo">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="me-2">
+                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="me-2" aria-label="Facebook Logo">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://www.twitter.com/yourprofile" target="_blank">
+                        <a href="https://www.twitter.com/yourprofile" target="_blank" aria-label="Twitter Logo">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                     </div>
@@ -291,6 +291,28 @@ min-vh-100: This class sets the minimum height of the body to 100% of the viewpo
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/1110908b34.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
+            });
+    </script>
 
 
 </body>
