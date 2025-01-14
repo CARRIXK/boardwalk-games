@@ -101,12 +101,10 @@ h2 {
 
 /* Games */
 
-#games .card-footer {
-    color: black;
-    font-weight: normal;
-    font-style: italic;
+#new-games .card, 
+#fav-games .card {
+    border: none;
 }
-
 
 /* Footer / Contact */
 
@@ -146,6 +144,13 @@ h2 {
 
 #contact .table-dark * {
  background-color: transparent;   
+}
+
+
+/* Events */
+#offer {
+    background-color: var(--highlight-color);
+    color: white;
 }
 
 
@@ -196,6 +201,7 @@ h2 {
     #services .card-body {
         min-height: 195px;
     }
+
 }
 
 
